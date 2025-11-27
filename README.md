@@ -112,10 +112,13 @@ plt.show()
 @mdinalayubi
 ```
 
-1. Import Libraries
-   Digunakan library penting seperti pandas, numpy, matplotlib, seaborn, dan scikit-learn untuk preprocessing, visualisasi, dan clustering.
-2. Load Dataset `segmentasi.csv`
-   Dataset dibaca dengan:
+# 1. Import Libraries
+
+Digunakan library penting seperti pandas, numpy, matplotlib, seaborn, dan scikit-learn untuk preprocessing, visualisasi, dan clustering.
+
+# 2. Load Dataset `segmentasi.csv`
+
+Dataset dibaca dengan:
 
 ```py
 df = pd.read_csv(``segmentasi.csv``)
@@ -127,7 +130,7 @@ df = pd.read_csv(``segmentasi.csv``)
 - Memahami tipe data
 - Mengecek struktur data
 
-3. Pra-Pemrosesan
+# 3. Pra-Pemrosesan
 
 ## Membersihkan data
 
@@ -153,8 +156,14 @@ Mengubah skala data agar seragam (rata-rata = 0, standar deviasi = 1):
 StandardScaler()
 ```
 
-Ini penting karena K-Means sensitif terhadap perbedaan skala. 4. Reduksi Dimensi dengan t-SNE
-TSNE digunakan untuk menggambar data 2 dimensi, agar klaster terlihat secara visual. 5. Menentukan Jumlah `Cluster` (Elbow Method)
+Ini penting karena K-Means sensitif terhadap perbedaan skala
+
+# 4. Reduksi Dimensi dengan t-SNE
+
+TSNE digunakan untuk menggambar data 2 dimensi, agar klaster terlihat secara visual.
+
+# 5. Menentukan Jumlah `Cluster` (Elbow Method)
+
 K-Means membutuhkan jumlah cluster (k).
 Menggunakan inertia untuk melihat titik siku (elbow):
 
@@ -162,14 +171,20 @@ Menggunakan inertia untuk melihat titik siku (elbow):
 kmeans.inertia_
 ```
 
-Biasanya k sekitar 4–6 untuk segmentasi pelanggan. 6. Membuat Model K-Means
+Biasanya k sekitar 4–6 untuk segmentasi pelanggan.
+
+# 6. Membuat Model K-Means
+
 Setelah jumlah cluster ditentukan, model dilatih:
 
 ```py
 KMeans(n_clusters=5)
 ```
 
-Kolom baru `Cluster` ditambahkan ke dataset. 7. Visualisasi Hasil Cluster
+Kolom baru `Cluster` ditambahkan ke dataset.
+
+# 7. Visualisasi Hasil Cluster
+
 Menggunakan scatter plot dari hasil t-SNE:
 ![gambar](foto/Figure1.png)
 ![gambar](foto/Figure2.png)

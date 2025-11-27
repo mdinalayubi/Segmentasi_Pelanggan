@@ -162,6 +162,7 @@ StandardScaler()
 ```
 
 Ini penting karena K-Means sensitif terhadap perbedaan skala
+@mdinalayubi
 
 # 4. Reduksi Dimensi dengan t-SNE
 

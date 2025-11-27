@@ -31,6 +31,7 @@ print("Preview Dataset:")
 print(df.head())
 print("\nInfo Dataset:")
 print(df.info())
+@mdinalayubi
 
 
 # ============================
@@ -54,6 +55,7 @@ for col in df.columns:
 # Standardisasi fitur
 scaler = StandardScaler()
 data_scaled = scaler.fit_transform(df)
+@mdinalayubi
 
 
 # ============================
@@ -66,6 +68,7 @@ plt.figure(figsize=(7, 7))
 plt.scatter(tsne_result[:, 0], tsne_result[:, 1])
 plt.title("Visualisasi Awal Data Dengan t-SNE")
 plt.show()
+@mdinalayubi
 
 
 # ============================
@@ -84,6 +87,7 @@ plt.title("Metode Siku - Menentukan Jumlah Cluster Optimal")
 plt.xlabel("Jumlah Cluster")
 plt.ylabel("Inertia")
 plt.show()
+@mdinalayubi
 
 
 # ============================
@@ -94,6 +98,7 @@ df['Cluster'] = kmeans_final.fit_predict(data_scaled)
 
 print("\nContoh hasil cluster:")
 print(df.head())
+@mdinalayubi
 
 
 # ============================
@@ -169,6 +174,7 @@ Menggunakan inertia untuk melihat titik siku (elbow):
 
 ```py
 kmeans.inertia_
+@mdinalayubi
 ```
 
 Biasanya k sekitar 4–6 untuk segmentasi pelanggan.
@@ -179,6 +185,7 @@ Setelah jumlah cluster ditentukan, model dilatih:
 
 ```py
 KMeans(n_clusters=5)
+@mdinalayubi
 ```
 
 Kolom baru `Cluster` ditambahkan ke dataset.

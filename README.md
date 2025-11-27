@@ -174,7 +174,6 @@ Menggunakan inertia untuk melihat titik siku (elbow):
 
 ```py
 kmeans.inertia_
-@mdinalayubi
 ```
 
 Biasanya k sekitar 4–6 untuk segmentasi pelanggan.
@@ -185,7 +184,6 @@ Setelah jumlah cluster ditentukan, model dilatih:
 
 ```py
 KMeans(n_clusters=5)
-@mdinalayubi
 ```
 
 Kolom baru `Cluster` ditambahkan ke dataset.
